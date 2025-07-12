@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
-import leftLeaf from "./assets/images/hero-left-leaf.png";
-import rightLeaf from "./assets/images/hero-right-leaf.png";
-import video from "./assets/videos/output.mp4";
+
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -70,8 +68,16 @@ const Hero = () => {
     <>
       <section id="hero" className="noisy">
         <h1 className="title">MOJITO</h1>
-        <img src={leftLeaf} alt="left-leaf" className="left-leaf" />
-        <img src={rightLeaf} alt="right-leaf" className="right-leaf" />
+        <img
+          src="/images/hero-left-leaf.png"
+          alt="left-leaf"
+          className="left-leaf"
+        />
+        <img
+          src="/images/hero-right-leaf.png"
+          alt="right-leaf"
+          className="right-leaf"
+        />
         <div className="body">
           <div className="content">
             <div className="space-y-5 hidden md:block">
@@ -92,7 +98,7 @@ const Hero = () => {
             <div className="video absolute inset-0">
               <video
                 ref={videoRef}
-                src={video}
+                src="/videos/output.mp4"
                 muted
                 playsInline
                 preload="auto"

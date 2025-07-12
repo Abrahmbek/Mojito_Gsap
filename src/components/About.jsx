@@ -1,9 +1,5 @@
 import React from "react";
-import abt1 from "./assets/images/abt1.png";
-import abt2 from "./assets/images/abt2.png";
-import abt3 from "./assets/images/abt3.png";
-import abt4 from "./assets/images/abt4.png";
-import abt5 from "./assets/images/abt5.png";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -71,25 +67,25 @@ const About = () => {
       <div className="top-grid">
         <div className="md:col-span-3">
           <div className="noisy" />
-          <img src={abt1} alt="grid-img-1" />
+          <img src="/images/abt1.png" alt="grid-img-1" />
         </div>
         <div className="md:col-span-6">
           <div className="noisy" />
-          <img src={abt2} alt="grid-img-2" />
+          <img src="/images/abt2.png" alt="grid-img-2" />
         </div>
         <div className="md:col-span-3">
           <div className="noisy" />
-          <img src={abt5} alt="grid-img-5" />
+          <img src="/images/abt5.png" alt="grid-img-5" />
         </div>
       </div>
       <div className="bottom-grid">
         <div className="md:col-span-8">
           <div className="noisy" />
-          <img src={abt3} alt="grid-img-8" />
+          <img src="/images/abt3.png" alt="grid-img-8" />
         </div>
         <div className="md:col-span-4">
           <div className="noisy" />
-          <img src={abt4} alt="grid-img-4" />
+          <img src="/images/abt4.png" alt="grid-img-4" />
         </div>
       </div>
     </div>

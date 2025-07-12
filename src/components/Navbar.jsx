@@ -3,7 +3,6 @@ import { navLinks } from "./constants";
 //import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import logo from "./assets/images/logo.png";
 
 import { Link } from "react-router-dom";
 
@@ -30,7 +29,7 @@ const Navbar = () => {
     <nav>
       <div>
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="logo" />
+          <img src="/images/logo.png" alt="logo" />
           <p>Velvet Pour</p>
         </a>
 
