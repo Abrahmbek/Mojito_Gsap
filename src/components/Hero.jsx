@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -42,13 +42,13 @@ const Hero = () => {
         },
       })
       .to(".right-leaf", { y: 200 }, 0)
-      .to(".left-leaf", { y: -200 }, 0);
+      .to(".left-leaf", { y: -200 }, 0)
+      .to(".arrow", { y: 100 }, 0);
 
-    const startValue = isMobile ? "top 50%" : "center 60%";
+    const startValue = isMobile ? "top 50%" : "center 50%";
     const endValue = isMobile ? "120% top" : "bottom top";
 
-    /// video animation timeline
-    const tl = gsap.timeline({
+    let tl = gsap.timeline({
       scrollTrigger: {
         trigger: "video",
         start: startValue,
@@ -64,10 +64,11 @@ const Hero = () => {
       });
     };
   }, []);
+
   return (
     <>
       <section id="hero" className="noisy">
-        <h1 className="title">MOJITO</h1>
+        <h1 className="title z-10 relative">MOJITO</h1>
         <img
           src="/images/hero-left-leaf.png"
           alt="left-leaf"
@@ -95,14 +96,14 @@ const Hero = () => {
               </p>
               <a href="#cocktails">View Cocktails</a>
             </div>
-            <div className="video absolute inset-0">
+            <div className="video absolute inset-0 z-0 flex justify-center items-center bg-none">
               <video
                 ref={videoRef}
-                src="/videos/output.mp4"
                 muted
                 playsInline
                 preload="auto"
-              ></video>
+                src="/videos/output.mp4"
+              />
             </div>
           </div>
         </div>

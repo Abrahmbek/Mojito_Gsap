@@ -85,11 +85,11 @@ body {
   }
 
   .noisy {
-    @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
+    @apply absolute inset-0 size-full bg-transparent;
   }
 
   #hero {
-    @apply relative z-10 min-h-dvh w-full border border-transparent;
+    @apply relative z-10 min-h-dvh w-full border border-transparent bg-transparent;
 
     h1 {
       @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
@@ -133,7 +133,7 @@ body {
   }
 
   video {
-    @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+    @apply w-full md:h-[80%] h-1/2   md:object-contain object-bottom object-cover;
   }
 
   #cocktails {
